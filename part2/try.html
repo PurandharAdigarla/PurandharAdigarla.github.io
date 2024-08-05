@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Friendship Card</title>
+    <style>
+      @keyframes slideInBottom {
+        from {
+          transform: translateY(100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideInTop {
+        from {
+          transform: translateY(-100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideInRight {
+        from {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideInLeft {
+        from {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes flipCoin {
+        from {
+          transform: rotateY(0deg);
+        }
+        to {
+          transform: rotateY(180deg);
+        }
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: url("https://media.assettype.com/filmcompanion/2023-12/a8966d5e-659f-4bc3-ac24-58a36e83b56f/salaar_b.jpg?w=1528")
+          no-repeat center center/cover;
+        margin: 0;
+      }
+
+      .card {
+        background-color: rgba(255, 255, 255, 0.9);
+        width: 460px;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        animation: slideInBottom 1s ease-in-out;
+        perspective: 1000px;
+      }
+
+      .card-inner {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        transform-style: preserve-3d;
+        transition: transform 0.6s;
+        transform: rotateY(0deg);
+      }
+
+      .card-inner.flipped {
+        transform: rotateY(180deg);
+      }
+
+      .card-front,
+      .card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+      }
+
+      .card-front {
+        background: url("https://media.assettype.com/filmcompanion/2023-12/a8966d5e-659f-4bc3-ac24-58a36e83b56f/salaar_b.jpg?w=1528")
+          no-repeat center center/cover;
+        cursor: pointer;
+      }
+
+      .card-back {
+        background-color: #f5f5dc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #333;
+        font-size: 24px;
+        font-weight: bold;
+        transform: rotateY(180deg);
+        font-family: "Georgia", serif;
+        text-align: center;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      .card h1 {
+        color: #444;
+        font-size: 24px;
+        margin-bottom: 20px;
+        animation: slideInRight 1s ease-in-out;
+      }
+
+      .card p {
+        color: #555;
+        font-size: 18px;
+        margin-bottom: 15px;
+        animation: slideInLeft 1s ease-in-out;
+      }
+
+      .card .button {
+        background-color: #ff6347;
+        color: white;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 16px;
+      }
+
+      .card .button:hover {
+        background-color: #ff4500;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front" onclick="flipCard()"></div>
+        <div class="card-back">HAPPY FRIENDSHIP DAY</div>
+      </div>
+      <p>"Our friendship is like a fine wine, getting better with age."</p>
+      <p>Proud to have my devaratha!!!</p>
+    </div>
+
+    <script>
+      function flipCard() {
+        const cardInner = document.querySelector(".card-inner");
+        cardInner.classList.toggle("flipped");
+      }
+    </script>
+  </body>
+</html>
