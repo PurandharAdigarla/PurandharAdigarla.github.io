@@ -1,0 +1,17 @@
+body {
+  background-color: azure;
+}
+h1,
+h3 {
+  color: red;
+  background-color: yellow;
+  width: 190px;
+}
+p {
+  background-color: antiquewhite;
+}
+.c1 {
+  color: rgb(59, 52, 52);
+  background-color: rgba(192, 192, 192, 0.52);
+  width: 190px;
+}
