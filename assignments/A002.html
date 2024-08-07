@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+    :root {
+      --primary-color: #5b99c2;
+      --dark-grey: #475569;
+      --light-grey: ;
+      --white: #f8fafc;
+      --black: #000000;
+      --baige: #f9dbba;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: var(--baige);
+      font-style: bold;
+      margin: 0;
+      background-image: linear-gradient(
+        to bottom right,
+        var(--primary-color),
+        var(--baige)
+      );
+    }
+    .placeholder {
+      font-family: "Poppins", sans-serif;
+      background-color: var(--baige);
+      font-style: bold;
+      margin: 0;
+    }
+    .container {
+      display: flex;
+      width: auto;
+      height: 75vh;
+      padding: 2rem 1rem;
+      justify-content: center;
+      align-items: center;
+    }
+    .navigation {
+      font-family: "Poppins", sans-serif;
+      max-width: 100%;
+      max-height: 100px;
+      background-image: linear-gradient(to bottom right, #1a4870, #1f316f);
+      border-radius: 0rem 0rem 0rem 1rem;
+      padding: 1rem;
+      text-align: left;
+      border-radius: 0 0 0 25px;
+      padding: 1rem;
+    }
+    .navigation .nav-name {
+      font-size: 1.5rem;
+      text-align: left;
+    }
+    .box {
+      width: 300;
+      height: 300px;
+      border: 1.5px solid #000000;
+      justify-content: center;
+      margin-right: 30px;
+    }
+    .list-inline {
+      display: inline;
+      padding: 0rem 1rem;
+    }
+    .navigation .link {
+      color: var(--black);
+      font-style: bold;
+      text-decoration: none;
+    }
+    .navigation .list-bullet {
+      text-align: right;
+    }
+    .link:before {
+      transform: scaleX(0);
+      transition: transform 0.2s linear;
+    }
+    .link:hover {
+      color: var(--baige);
+      transform: scaleX(1);
+    }
+    .footer {
+      width: 100%;
+      height: 100px;
+      background-image: linear-gradient(to bottom right, #1a4870, #1f316f);
+      text-align: center;
+      border-radius: 0 25px 0 0;
+    }
+    .footer .col {
+      margin-top: 30px;
+    }
+  </style>
+  <body>
+    <nav class="navigation">
+      <div class="nav-name"><h1>My Application</h1></div>
+      <ul class="list-bullet">
+        <li class="list-inline">
+          <a class="link" href="#"><strong>HOME</strong></a>
+        </li>
+        <li class="list-inline">
+          <a class="link" href="#"><strong>ABOUT US</strong></a>
+        </li>
+        <li class="list-inline">
+          <a class="link" href="#"><strong>PRICING</strong></a>
+        </li>
+        <li class="list-inline">
+          <a class="link" href="#"><strong>CONTACT</strong></a>
+        </li>
+      </ul>
+    </nav>
+    <div class="container">
+      <div class="box">
+        <img
+          src="https://t3.ftcdn.net/jpg/03/40/18/82/360_F_340188230_joMO8Lp1XYpOz8B1otkxIXZRwCsNQqt0.jpg"
+          width="300px"
+          height="300px"
+        />
+      </div>
+      <div class="box">
+        <img
+          src="https://png.pngtree.com/element_our/png/20180902/monster-school-fantasy-doodle-png_75262.jpg"
+          width="300px"
+          height="300px"
+        />
+      </div>
+      <div class="box">
+        <img
+          src="https://png.pngtree.com/element_our/sm/20180515/sm_5afb04190960d.png"
+          width="300px"
+          height="300px"
+        />
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="col">Copyrights Reserved 2024</div>
+    </footer>
+  </body>
+</html>
